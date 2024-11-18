@@ -1,18 +1,13 @@
-
-import './App.css'
-
+import React from "react"
+import FullMainList from "./Contante/Pages/Pages"
 function App() {
-let b ='Hello'
-console.log(b);
+ 
 return (
-  <div>
-    <h1>Way</h1>
-    <h2>Hi{b}</h2>
-  </div>
+  <>
+  <FullMainList></FullMainList>
+  </>
 )
-
-
-
 }
+
 
 export default App
