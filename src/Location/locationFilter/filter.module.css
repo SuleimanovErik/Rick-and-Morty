@@ -1,0 +1,73 @@
+.div__found{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.input{
+    width: 520px;
+    height: 62px;
+    border-radius: 10px;
+    padding-left: 44px;
+    background-image: url(/find.svg);
+    background-repeat: no-repeat;
+    background-position-y: 16px;
+    background-position-x: 8px;
+    border: 1.7px solid grey;
+}
+.input:hover{
+    border: 1.2px solid aquamarine;
+}
+.div__contain{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.contain{
+    width: 74%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 22px;
+    justify-content: center;
+}
+.render__Contain{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.render {
+    max-width: 150px;
+    padding-bottom: 200px;
+}
+@media screen and (max-width:1024px){
+    .contain{
+        width: 94%;
+        column-gap: 26px;
+        row-gap: 22px;
+    }
+
+}
+@media screen and (max-width:1023px){
+    .contain{
+        width: 100%;
+        column-gap: 36px;
+        row-gap: 32px;
+    }
+
+}
+@media screen and (max-width:767px){
+    .contain{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        align-items: center;
+    }
+
+    .input{
+        width: 90%;
+    }
+}

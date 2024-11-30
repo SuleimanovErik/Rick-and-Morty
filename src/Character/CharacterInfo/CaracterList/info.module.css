@@ -1,0 +1,127 @@
+.contain__information{
+    display: flex;
+    justify-content: center;
+    column-gap: 60px;
+    margin-top: 110px;
+}
+.dav{
+    width: 26%;
+    display: block;
+}
+.div__Inform{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom:rgb(143, 142, 142) solid 1px ;
+
+}
+.div__Informss{
+    border-bottom:rgb(143, 142, 142) solid 1px ;
+    height: 90px;
+}
+.div__Informs{
+    height: 90px;
+}
+.div__Rick{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    top: 70px;
+    position: relative;
+}
+.img__Rick {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .img__Profile {
+    position: relative;
+    top: 70px;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    transform: scale(1.5);
+    transition: transform 0.3s ease-in-out;
+  }
+.h1__Rick{
+    text-align: center;
+}
+.Episodes{
+    margin-bottom: 8px;
+    margin-right: 8px;
+    color: #665f5f;
+}
+.Information{
+    margin-bottom: 10px;
+    color: #535050;
+}
+.contain__inform{
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+    margin-top: 50px;
+}
+.dav2{
+    width: 26%;
+    display: block;
+}
+.div__Episode{
+    width: 100%;
+    height: 74px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom:rgb(143, 142, 142) solid 1px ;
+}
+.GoBack{
+    position: fixed;
+    top: 120px;
+    font-size: 22px;
+    display: flex;
+    left: 241px;
+    column-gap: 8px;
+    z-index: 200000;
+}
+@media screen  and (max-width:1024px){
+    .dav{
+        width: 40%;
+    }
+    .dav2{
+        width: 40%;
+    }
+    .GoBack{
+        left: 20px;
+        top: 80px;
+        z-index: 200000;
+    }
+}
+
+@media screen and (max-width:767px){
+    .contain__information{ 
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        column-gap: 1px;
+        align-items: center;
+        row-gap: 20px;
+    }
+    .dav{
+        width: 80%;
+    }
+    .dav2{
+        width: 80%;
+    }
+    .GoBack{
+        left: 1px;
+        column-gap: 8px;
+        font-size: 16px;
+        top: 80px;
+    }
+
+}

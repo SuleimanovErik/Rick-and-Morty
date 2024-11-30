@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Karla", sans-serif;
+    color: #000;
+    text-decoration: none;
+}
+.header{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+}
+.div__header{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navigation{
+    display: flex;
+    column-gap: 30px;
+}
+.nav{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.burger__div{
+    display: none;
+}
+.menu{
+    display: none;
+}
+.BugerWindow__div{
+    position: fixed;
+    width: 300px;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(36, 35, 35);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 18px;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.link{
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    position: relative;
+    bottom: 14px;
+}
+.x{
+   max-width: 30px;
+   position: relative;
+}
+.divX{
+    width: 90%;
+    display: flex;
+    justify-content: end;
+    position: relative;
+    bottom: 24px;
+    z-index: 100000;
+}
+
+@media screen and (max-width:767px) {
+.navigation{
+    display: none;
+}
+.burger__div{
+    display: block;
+}
+.burger{
+    max-width: 30px;
+}
+.notNav{
+    display: none;
+}
+
+}

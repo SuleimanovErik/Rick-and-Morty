@@ -1,0 +1,12 @@
+@media screen and (max-width:1024px) {
+    .Rick2{
+        width: 400px;
+    }
+    
+    }
+@media screen and (max-width:767px) {
+    .Rick2{
+        width: 300px;
+    }
+    
+    }

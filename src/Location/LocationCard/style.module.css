@@ -1,0 +1,27 @@
+.Card{
+    width: 22%;
+    height: 128px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 6px;
+    background-color: #d3cbcb3f;
+}
+@media screen and (max-width:1024px){
+    .Card{
+        width: 26%;
+    }
+}
+@media screen and (max-width:1023px){
+    .Card{
+        width: 40%;
+    }
+}
+@media screen and (max-width:767px){
+    .Card{
+        width: 90%;
+    }
+
+}

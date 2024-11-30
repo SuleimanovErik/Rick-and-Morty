@@ -1,0 +1,41 @@
+.Card{
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+.CardLink{
+    width: 22%;
+}
+.Character__img{
+    max-width: 100%;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+.Name{
+    padding-left: 16px;
+    padding-top: 8px;
+}
+.Information{
+    display: flex;
+    column-gap: 6px;
+}
+.render{
+    max-width: 150px;
+}
+
+@media screen and (max-width:1024px) {
+    .CardLink{
+        width: 30%;
+    }
+    .Character__img{
+        width: 100%;
+    }
+}
+@media screen and (max-width:767px) {
+
+    .CardLink{
+        width: 90%;
+        
+    }
+}
