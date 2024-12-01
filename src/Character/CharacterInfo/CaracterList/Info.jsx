@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
-import i from "./Info.module.css";
+import i from "./info.module.css";
 
 const CharInfo = () => {
   const [data, setData] = useState(null);
@@ -29,9 +29,10 @@ const CharInfo = () => {
 
         const episodeResponse = await Promise.all(
           episodeLinks.map((url) => fetch(url).then((res) => res.json()))
-        );
-
+        );  
         setEpisodes(episodeResponse);
+        console.log(data.id);
+        
       }
     }
     fetchCharacterData();

@@ -8,20 +8,21 @@ const CardEpizod = () => {
   const [filterName, setFilterName] = useState('');
   const [error, setError] = useState(false);
   const [loader, setLoader] = useState(false);
+  const [page,setPage]=useState(1)
 
   useEffect(() => {
     const GetData = async () => {
      
 
       try {
-        const response = await EpisodeAll.getAllEpisode({ name: filterName });
+        const response = await EpisodeAll.getAllEpisode({ name: filterName,page:page });
 
         if (response && response.results && response.results.length > 0) {
           setData(response.results);
           setError(false);
         } else {
           setData([]);
-          setError(true);
+          setError(true); 
         }
       } catch (err) {
         console.error('error');
@@ -30,7 +31,7 @@ const CardEpizod = () => {
     };
 
     GetData();
-  }, [filterName]);
+  }, [filterName,page]);
 
   if (loader) {
     return (
@@ -86,8 +87,14 @@ const CardEpizod = () => {
               </Link>
             ))
           )}
+
+         <div className={ep.ShoyMor}>
+          <div>
+            <button className={ep.Page__btn} onClick={(()=>{setPage((prev)=>prev == 3?prev=0:prev+1 )})}><h3>{`Page-${page} `}</h3></button>
+          </div>
+        </div>  
         </div>
-      </div>
+      </div>  
     </>
   );
 };

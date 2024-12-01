@@ -8,12 +8,13 @@ const LocationList = () => {
     const [filterName,setFilterName]=useState('')
     const [error,setError]=useState(true)
     const [loading,setLoading]=useState(true)
+    const [page,setPage]=useState(1)
     useEffect(()=>{
         async function GetData() {
           setTimeout(()=>{
             setLoading(false)
           }, 300)
-           const result= await fetch(`https://rickandmortyapi.com/api/location?name=${filterName}`)
+           const result= await fetch(`https://rickandmortyapi.com/api/location?name=${filterName}&page=${page}`)
           if (result.ok) {
            const rasultJson=await result.json()
            setData(rasultJson.results)
@@ -29,7 +30,7 @@ const LocationList = () => {
          GetData()
        
         
-           },[filterName])
+           },[filterName,page])
            if(loading){
             return(
               <div className={l.render__Contain}>
@@ -53,7 +54,7 @@ const LocationList = () => {
       </div>}
         </div>
     </div>
- 
+    <div className={l.ShoyMor}><div><button className={l.Page__btn} onClick={(()=>{setPage((prev)=>prev == 7?prev=1:prev+1 )})}><h3>{`Page-${page} `}</h3></button></div></div>
     </>
   )
 }

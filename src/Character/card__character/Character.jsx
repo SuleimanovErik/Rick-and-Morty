@@ -11,6 +11,7 @@ function Character() {
   const [filterName, setFilterName] = useState('')
   const [error, setError] = useState(true)
   const [loading, setLoading] = useState(true)
+  const [page,setPage]=useState(1)
   const location = useLocation()
 
 
@@ -20,7 +21,7 @@ function Character() {
         setLoading(false)
       }, 300)
 
-      const result = await fetch(`https://rickandmortyapi.com/api/character/?name=${filterName}&gender=${selectGender}&species=${selectSpecies}&status=${selectStatus}`)
+      const result = await fetch(`https://rickandmortyapi.com/api/character/?name=${filterName}&gender=${selectGender}&species=${selectSpecies}&status=${selectStatus}&page=${page}`)
       if (result.ok) {
         const rasultJson = await result.json()
         setData(rasultJson.results)
@@ -31,13 +32,16 @@ function Character() {
       if (result.ok) {
         setError(true)
       }
-
     }
     GetData()
     console.log(selectGender);
+    console.log(page);
+    
 
 
-  }, [filterName, selectGender, selectSpecies, selectStatus])
+
+  }, [filterName, selectGender, selectSpecies, selectStatus,page])
+
 
   if (loading) {
     return (
@@ -75,6 +79,12 @@ function Character() {
       {!error && <div style={{ width: '100%', height: '300px', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
         <div style={{ width: '20%', paddingTop: '80px' }}><img style={{ maxWidth: '100%' }} src="https://rick-morty-lime.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fpickle.d0091c27.png&w=640&q=75" /></div> <h1>Characters not Found!</h1>
       </div>}
+
+
+
+
+
+    <div className={card.ShoyMor}><div><button className={card.Page__btn} onClick={(()=>{setPage((prev)=>prev == 42?prev=0:prev+1 )})}><h3>{`Page-${page} `}</h3></button></div></div>  
     </>
   )
 }
