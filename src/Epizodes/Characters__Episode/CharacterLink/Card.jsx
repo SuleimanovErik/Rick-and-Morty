@@ -9,8 +9,6 @@ const CharEpisode = () => {
   const [loading, setLoading] = useState(true); 
   const [error, setError] = useState(null);
   
-  console.log(EpisodeAll.getAllEpisode({name:'W'}));
-  
 
   useEffect(() => {
     const EpisodeData = async () => {

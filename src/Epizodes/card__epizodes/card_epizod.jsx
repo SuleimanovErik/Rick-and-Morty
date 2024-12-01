@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import ep from './Card_epizod.module.css';
+import ep from './card_epizod.module.css';
 import { EpisodeAll } from '../../api/api.episode';
 import { Link } from 'react-router-dom';
 
@@ -16,7 +16,6 @@ const CardEpizod = () => {
 
       try {
         const response = await EpisodeAll.getAllEpisode({ name: filterName,page:page });
-
         if (response && response.results && response.results.length > 0) {
           setData(response.results);
           setError(false);
@@ -90,7 +89,7 @@ const CardEpizod = () => {
 
          <div className={ep.ShoyMor}>
           <div>
-            <button className={ep.Page__btn} onClick={(()=>{setPage((prev)=>prev == 3?prev=0:prev+1 )})}><h3>{`Page-${page} `}</h3></button>
+            <button className={ep.Page__btn} onClick={(()=>{setPage((prev)=>prev == 3?prev=1:prev+1 )})}><h3>{`Page-${page} `}</h3></button>
           </div>
         </div>  
         </div>
