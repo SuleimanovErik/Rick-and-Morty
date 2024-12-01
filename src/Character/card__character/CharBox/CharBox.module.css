@@ -4,11 +4,6 @@
     border-radius: 6px;
     object-fit: cover;
 }
-.Card:active{
-    width: 20%;
-    transform: scale(1.5);
-    transition: transform 0.3s ease-in-out;
-}
 .Character__img{
     max-width: 100%;
     border-top-left-radius: 6px;
