@@ -15,17 +15,17 @@ const CardEpizod = () => {
      
 
       try {
-        const response = await EpisodeAll.getAllEpisode({ name: filterName,page:page });
+        const response = await EpisodeAll.getAllEpisode({ name: filterName,page:page })
         if (response && response.results && response.results.length > 0) {
-          setData(response.results);
-          setError(false);
+          setData(response.results)
+          setError(false)
         } else {
-          setData([]);
-          setError(true); 
+          setData([])
+          setError(true) 
         }
       } catch (err) {
-        console.error('error');
-        setError(true); 
+        console.error('error')
+        setError(true)
       } 
     };
 
